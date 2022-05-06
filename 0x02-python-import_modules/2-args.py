@@ -8,5 +8,3 @@ if __name__ == "__main__":
         print(f"{narg} arguments:")
     for i in range(narg):
         print(f"{i + 1}: {sys.argv[i + 1]}")
-
-
