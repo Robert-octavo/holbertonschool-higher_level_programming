@@ -7,7 +7,7 @@ def new_in_list(my_list, idx, new_element):
 
     my_new_list = []
     my_new_list.extend(my_list)
-    #print(my_new_list)
+
     my_new_list[idx] = new_element
 
     return (my_new_list)
