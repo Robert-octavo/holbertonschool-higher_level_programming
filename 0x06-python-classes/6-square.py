@@ -36,8 +36,8 @@ class Square:
     is of the specified type, otherwise False.
     """
     def __init__(self, size=0, position=(0, 0)):
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
     """In Python property()is a built-in function that creates and
         returns a property object. A property object has three methods,
         getter(), setter(), and delete()
@@ -48,11 +48,6 @@ class Square:
         """Return the current size"""
         return (self.__size)
 
-    @property
-    def position(self):
-        """Return the current position"""
-        return (self.__size)
-
     @size.setter
     def size(self, value):
         if not isinstance(value, int):
@@ -61,13 +56,18 @@ class Square:
             raise ValueError('size must be >= 0')
         self.__size = value
 
+    @property
+    def position(self):
+        """Return the current position"""
+        return (self.__position)
+
     @position.setter
     def position(self, value):
         if (not isinstance(value, tuple) or
                 not all(isinstance(num, int) for num in value) or
-                len(value) != 2 or not all(num >= 0) for num in value):
+                len(value) != 2 or not all(num >= 0 for num in value)):
             raise TypeError("position must be a tupel of 2 positive integers")
-        self.__size = value
+        self.__position = value
 
     def area(self):
         """Return the current area"""
