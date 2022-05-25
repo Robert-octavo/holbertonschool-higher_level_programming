@@ -37,6 +37,7 @@ class Square:
     """In Python property()is a built-in function that creates and
         returns a property object. A property object has three methods,
         getter(), setter(), and delete()
+        https://www.geeksforgeeks.org/getter-and-setter-in-python/
     """
     @property
     def size(self):
