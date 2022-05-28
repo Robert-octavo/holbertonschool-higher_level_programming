@@ -1,4 +1,4 @@
-# **Python - Test-driven development**
+# **Python :snake: - Test-driven development**
 ## **Background Context**
 Important notice on intranet checks for Python projects
 
