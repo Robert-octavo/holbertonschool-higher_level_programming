@@ -29,3 +29,11 @@ Test:
     >>> print(lazy_matrix_mul([[1, 2], ["Hello", 9]], [[9, 4], [2, 5]]))
     Traceback (most recent call last):
     TypeError: invalid data type for einsum
+
+    >>> print(lazy_matrix_mul([[9, 4, 4], [2, 8, 2]], [[1, 2], [4, 9]]))
+    Traceback (most recent call last):
+    ValueError: shapes (2,3) and (2,2) not aligned: 3 (dim 1) != 2 (dim 0)
+
+    >>> print(lazy_matrix_mul([[3, 4], [2, 9.0]], [[2], [4, 4]]))
+    Traceback (most recent call last):
+    ValueError: setting an array element with a sequence.
