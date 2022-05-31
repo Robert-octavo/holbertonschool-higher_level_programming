@@ -45,3 +45,11 @@ Test:
     >>> print(lazy_matrix_mul([[9, 4]], [[]]))
     Traceback (most recent call last):
     ValueError: shapes (1,2) and (1,0) not aligned: 2 (dim 1) != 1 (dim 0)
+
+    >>> print(lazy_matrix_mul(["School", "Holberton"], [[1, 2]]))
+    Traceback (most recent call last):
+    ValueError: shapes (2,) and (1,2) not aligned: 2 (dim 0) != 1 (dim 0)
+
+    >>> print(lazy_matrix_mul([[1, 2]], ["School", "Holberton"]))
+    Traceback (most recent call last):
+    TypeError: invalid data type for einsum
