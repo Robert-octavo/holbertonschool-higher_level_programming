@@ -19,6 +19,7 @@ def max_integer(list=[]):.
 import unittest
 max_integer = __import__('6-max_integer').max_integer
 
+
 class TestMaxInteger(unittest.TestCase):
     """Unittest for Max Integer"""
 
@@ -48,12 +49,12 @@ class TestMaxInteger(unittest.TestCase):
 
     def test_identical(self):
         """Test with a list of identical values"""
-        list = [4, 4, 4 , 4]
+        list = [4, 4, 4, 4]
         self.assertEqual(max_integer(list), 4)
 
     def test_one(self):
         """Test with a list with one element"""
-        list =[82]
+        list = [82]
         self.assertEqual(max_integer(list), 82)
 
     def test_none(self):
@@ -68,6 +69,7 @@ class TestMaxInteger(unittest.TestCase):
         """Test with list letters and int"""
         list = ["a", "d", 2]
         self.assertRaises(TypeError, max_integer, 1)
+
 
 if __name__ == '__main__':
     unittest.main()
