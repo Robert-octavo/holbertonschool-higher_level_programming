@@ -50,3 +50,7 @@ Test:
     >>> matrix_divided([[3, -1], (4, -1), [5, -3]], 1)
     Traceback (most recent call last):
     TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+    >>> matrix_divided([], 4)
+    Traceback (most recent call last):
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
