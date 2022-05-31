@@ -21,7 +21,7 @@ Test:
 
     >>> matrix_divided([["holberton", "school"], [4, 2]], 3)
     Traceback (most recent call last):
-    TypeError: matrix must be a matrix (list of lists) of integer/floats
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
 
     >>> matrix_divided([[3, 2, 1], [4, 2]], 3)
     Traceback (most recent call last):
@@ -49,4 +49,4 @@ Test:
 
     >>> matrix_divided([[3, -1], (4, -1), [5, -3]], 1)
     Traceback (most recent call last):
-    TypeError: matrix must be a matrix (list of lists) of integer/floats
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
