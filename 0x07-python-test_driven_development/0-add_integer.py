@@ -11,6 +11,7 @@ Write a function that adds 2 integers.
 
 """
 
+
 def add_integer(a, b=98):
     """
     Check for the type of a and b using isinstance if not raise a
