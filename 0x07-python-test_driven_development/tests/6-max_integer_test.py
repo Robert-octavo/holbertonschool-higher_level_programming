@@ -70,6 +70,11 @@ class TestMaxInteger(unittest.TestCase):
         list = ["a", "d", 2]
         self.assertRaises(TypeError, max_integer, 1)
 
+    def test_max_at_beginning(self):
+        self.assertEqual(max_integer([10, 9, 8, 2, 1]), 10)
+
+    def test_max_in_meddle(self):
+        self.assertEqual(max_integer([8, 4, 10, 6, 1]), 10)
 
 if __name__ == '__main__':
     unittest.main()
