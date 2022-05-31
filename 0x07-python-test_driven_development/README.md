@@ -47,9 +47,16 @@ At the end of this project, you are expected to be able to explain to anyone, **
 * All your files should end with a new line
 * All your test files should be inside a folder tests
 * All your test files should be text files (extension: .txt)
-* All your tests should be executed by using this command: *python3 -m doctest ./tests/**
+* All your tests should be executed by using this command: **python3 -m doctest ./tests/**
 * All your modules should have a documentation *(python3 -c 'print(__import__("my_module").__doc__)')*
 * All your functions should have a documentation *(python3 -c 'print(__import__("my_module").my_function.__doc__)')*
 * A documentation is not a simple word, it’s a real sentence explaining what’s the purpose of the module, class or method (the length of it will be verified)
 * We strongly encourage you to work together on test cases, so that you don’t miss any edge case – The Checker is checking for tests!
+
+## **Example of Test**
+*python3 -m doctest -v ./tests/5-text_indentation.txt*
+
+for the unitest use:
+
+*python3 -m unittest tests.6-max_integer_test 2>&1 | tail -1*
 
