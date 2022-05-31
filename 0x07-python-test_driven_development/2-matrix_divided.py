@@ -46,7 +46,7 @@ def matrix_divided(matrix, div):
     """
     Check is the matrix is empty and if the matrix is list type
     """
-    if not isinstance(matrix, list) or matrix == []:
+    if not isinstance(matrix, list) or matrix == [] or not matrix[0]:
         raise TypeError(error)
 
     if not all(isinstance(row, list) for row in matrix):
