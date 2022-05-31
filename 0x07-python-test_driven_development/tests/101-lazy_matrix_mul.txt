@@ -37,3 +37,11 @@ Test:
     >>> print(lazy_matrix_mul([[3, 4], [2, 9.0]], [[2], [4, 4]]))
     Traceback (most recent call last):
     ValueError: setting an array element with a sequence.
+
+    >>> print(lazy_matrix_mul([], [[9, 4]]))
+    Traceback (most recent call last):
+    ValueError: shapes (0,) and (1,2) not aligned: 0 (dim 0) != 1 (dim 0)
+
+    >>> print(lazy_matrix_mul([[9, 4]], [[]]))
+    Traceback (most recent call last):
+    ValueError: shapes (1,2) and (1,0) not aligned: 2 (dim 1) != 1 (dim 0)
