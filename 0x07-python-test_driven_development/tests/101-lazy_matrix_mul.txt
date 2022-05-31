@@ -53,3 +53,11 @@ Test:
     >>> print(lazy_matrix_mul([[1, 2]], ["School", "Holberton"]))
     Traceback (most recent call last):
     TypeError: invalid data type for einsum
+
+    >>> print(lazy_matrix_mul([[9, 4], [2, 15]], [[11, 2], ["Hello", 19]]))
+    Traceback (most recent call last):
+    TypeError: invalid data type for einsum
+
+    >>> print(lazy_matrix_mul([[9, 7], [1]], [[1, 26], [44, 9]]))
+    Traceback (most recent call last):
+    ValueError: setting an array element with a sequence.
