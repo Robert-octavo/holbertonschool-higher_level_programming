@@ -62,7 +62,7 @@ class TestMaxInteger(unittest.TestCase):
         self.assertRaises(TypeError, max_integer, None)
 
     def test_no_list(self):
-        """test with aomethin that is not a list"""
+        """test with somethin that is not a list"""
         self.assertRaises(TypeError, max_integer, 7)
 
     def test_not_int(self):
