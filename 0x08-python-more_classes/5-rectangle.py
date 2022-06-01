@@ -59,7 +59,8 @@ class Rectangle:
         return(f"Rectangle({self.__width}, {self.__height})")
 
     def __del__(self):
-        """deletes a rectangle instance"""
+        """deletes a rectangle instance and print a messaje"""
+        print("Bye rectangle...")
 
     @property
     def width(self):
