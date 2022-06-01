@@ -23,7 +23,7 @@ Write a class Rectangle that defines a rectangle by:
     - Public instance method: def perimeter(self): that returns the rectangle
     perimeter:
         - if width or height is equal to 0, perimeter is equal to 0
-    - print() and str() should print the rectangle with the character #: 
+    - print() and str() should print the rectangle with the character #:
     (see example below)
     - if width or height is equal to 0, return an empty string
 You are not allowed to import any module
