@@ -10,4 +10,6 @@
 |0x05-python-exceptions|[0x05-python-exceptions](https://github.com/Robert-octavo/holbertonschool-higher_level_programming/tree/main/0x05-python-exceptions)
 |0x06-python-classes|[0x06-python-classes](https://github.com/Robert-octavo/holbertonschool-higher_level_programming/tree/main/0x06-python-classes)
 |0x07-python-test_driven_development|[0x07-python-test_driven_development](https://github.com/Robert-octavo/holbertonschool-higher_level_programming/tree/main/0x07-python-test_driven_development)
+|0x08-python-more_classes|[0x08-python-more_classes](https://github.com/Robert-octavo/holbertonschool-higher_level_programming/tree/main/0x08-python-more_classes)
+|0x09-python-everything_is_object|[0x09-python-everything_is_object](https://github.com/Robert-octavo/holbertonschool-higher_level_programming/tree/main/0x09-python-everything_is_object)
 
