@@ -14,5 +14,6 @@ class MyList(list):
     """class my list"""
     def print_sorted(self):
         """Sorted print"""
-        list = self
-        print(f"{list.sort()}")
+        list = self[:]
+        list.sort()
+        print(f"{list}")
