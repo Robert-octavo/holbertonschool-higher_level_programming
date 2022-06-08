@@ -35,9 +35,9 @@ https://docs.python.org/3/reference/datamodel.html#object.__eq__
 class MyInt(int):
     """class my int"""
     def __eq__(self, other):
-        """Equality becomes inequality."""
+        """Equality == Not Equal."""
         return super().__ne__(other)
 
     def __ne__(self, other):
-        """Not Equal becomes equality."""
+        """Not Equal == Equal."""
         return super().__eq__(other)
