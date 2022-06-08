@@ -5,5 +5,5 @@ Write an empty class BaseGeometry.
 
 
 class BaseGeometry():
-    """class my list"""
+    """class Base Geometry"""
     pass
