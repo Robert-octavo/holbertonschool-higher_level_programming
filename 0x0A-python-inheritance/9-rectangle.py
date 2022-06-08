@@ -31,4 +31,3 @@ class Rectangle(BaseGeometry):
     def area(self):
         """ Rectangle area"""
         return(self.__width * self.__height)
-
