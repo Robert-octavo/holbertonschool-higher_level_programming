@@ -7,9 +7,9 @@ of an object (string):
     - You donnot need to manage exceptions if the object
     cannot be serialized.
 """
-
-
 from json import dumps
+
+
 def to_json_string(my_obj):
     """function that return the JSON representation
     of an object"""
