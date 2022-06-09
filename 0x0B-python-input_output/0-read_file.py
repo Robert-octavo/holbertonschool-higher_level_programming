@@ -10,6 +10,7 @@ and prints it to stdout:
 
 """
 
+
 def read_file(filename=""):
     """function that reads a file"""
     with open(filename, encoding="utf_8") as file:
