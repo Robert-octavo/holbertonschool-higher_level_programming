@@ -12,20 +12,20 @@ of lists of integers representing the Pascals triangle of n:
     - You can assume n will be always an integer
 
 """
-def split(word):
-    return [int(char) for char in word]
-
 def pascal_triangle(n):
-    """pascal triangle"""
-    pascal_list = []
+    """Represent Pascal's Triangle of size n.
+
+    Returns a list of lists of integers representing the triangle.
+    """
     if n <= 0:
         return []
 
-    for i in range(n):
-        """print("[", end="")
-        print(','.join(map(str, str(11**i))), end="")
-        print("]")"""
-        pascal = str(11**i)
-        pascal = split(pascal)
-        pascal_list.append(pascal)
-    return(pascal_list)
+    pascal = [[1]]
+    while len(pascal) != n:
+        tri = pascal[-1]
+        tmp = [1]
+        for i in range(len(tri) - 1):
+            tmp.append(tri[i] + tri[i + 1])
+        tmp.append(1)
+        pascal.append(tmp)
+    return pascal
