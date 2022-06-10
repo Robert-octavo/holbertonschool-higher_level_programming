@@ -12,6 +12,10 @@ class Rectangle(Base):
         self.y = y
         super().__init__(id)
 
+    def __str__(self):
+        """use to print and str of the rectangle"""
+        return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
+
     @property
     def width(self):
         """the width of the Rectangle."""
@@ -59,7 +63,7 @@ class Rectangle(Base):
         if value < 0:
             raise ValueError("y must be >= 0")
         self.__y = value
-    
+
     def area(self):
         """Rectangle's area"""
         return self.width * self.height
