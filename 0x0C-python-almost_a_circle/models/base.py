@@ -46,3 +46,9 @@ class Base():
         if json_string is None or json_string == "[]":
             return empty_list
         return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """class method that returns an instance with all attributes
+        already set"""
+        pass
