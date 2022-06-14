@@ -53,7 +53,7 @@ class Square(Rectangle):
         """Retur a Key/value"""
         dictionary = {
                         "id": self.id,
-                        "height": self.height,
+                        "size": self.size,
                         "x": self.x,
                         "y": self.y}
         return dictionary
