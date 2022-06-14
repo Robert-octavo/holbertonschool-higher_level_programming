@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """Class Rectangle"""
+from turtle import width
 from models.base import Base
 
 
@@ -14,7 +15,12 @@ class Rectangle(Base):
 
     def __str__(self):
         """use to print and str of the rectangle"""
-        return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
+        _i = self.id
+        _x = self.x
+        _y = self.y
+        _w = self.width
+        _h = self.height
+        return f"[Rectangle] ({_i}) {_x}/{_y} - {_w}/{_h}"
 
     @property
     def width(self):
@@ -110,10 +116,10 @@ class Rectangle(Base):
     def to_dictionary(self):
         """that returns the dictionary representation of a Rectangle"""
         """Retur a Key/value"""
-        dictionary = {"id": self.id, 
-                    "width": self.width,
-                    "height": self.height,
-                    "x": self.x,
-                    "y": self.y 
-                    }
+        dictionary = {
+                        "id": self.id,
+                        "width": self.width,
+                        "height": self.height,
+                        "x": self.x,
+                        "y": self.y}
         return dictionary
