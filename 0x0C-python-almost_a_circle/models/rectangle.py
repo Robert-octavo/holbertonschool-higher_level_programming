@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """Class Rectangle"""
-from turtle import width
 from models.base import Base
 
 
