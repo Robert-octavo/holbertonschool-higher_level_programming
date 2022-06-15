@@ -3,7 +3,7 @@
 
 
 import json
-"""import os"""
+import os
 
 
 
@@ -62,18 +62,11 @@ class Base():
 
     @classmethod
     def load_from_file(cls):
-        """Return a list of classes instantiated from a file of JSON
-        Reads from `<cls.__name__>.json`.
-        Returns:
-            If the file does not exist - an empty list.
-            Otherwise - a list of instantiated classes.
-        """
+        """class method that returns a list of instances:"""
         empty_list = []
         filename = cls.__name__ + ".json"
-        """if os.path.exists(filename):"""
-        try: 
-            with open(filename, "r", encoding="utf_8") as file:
+        if os.path.exists(filename):
+            with open(filename, "r") as file:
                 list = cls.from_json_string(file.read())
-                return [cls.create(**dct) for dct in list]  
-        except Exception:
-            return empty_list
+                return [cls.create(**dct) for dct in list]
+        return empty_list
