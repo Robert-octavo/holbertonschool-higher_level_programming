@@ -35,3 +35,12 @@ class Base():
             else:
                 list = [object.to_dictionary() for object in list_objs]
                 file.write(Base.to_json_string(list))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """static method that returns the list of the JSON string
+        representation json_string"""
+        empty_list = []
+        if json_string is None or json_string == "[]":
+            return empty_list
+        return json.loads(json_string)
