@@ -2,7 +2,6 @@
 """Create a Class Base: """
 
 
-from encodings import utf_8
 import json
 import os
 
