@@ -32,5 +32,19 @@ class TestRectangle(unittest.TestCase):
         r6 = Rectangle(10, 2, 4, 5, 9)
         self.assertEqual(r6.id, 9)
 
+    def test_2_for_attributes(self):
+        """Test Rectangle class: check for attributes values."""
+
+        r1 = Rectangle(10, 2)
+        self.assertEqual(r1.width, 10)
+        self.assertEqual(r1.height, 2)
+        self.assertEqual(r1.x, 0)
+        self.assertEqual(r1.y, 0)
+        r2 = Rectangle(10, 2, 4, 5, 24)
+        self.assertEqual(r2.width, 10)
+        self.assertEqual(r2.height, 2)
+        self.assertEqual(r2.x, 4)
+        self.assertEqual(r2.y, 5)
+
 if __name__ == '__main__':
     unittest.main()
