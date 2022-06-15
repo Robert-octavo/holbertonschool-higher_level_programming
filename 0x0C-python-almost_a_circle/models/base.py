@@ -4,6 +4,9 @@
 
 from encodings import utf_8
 import json
+import os
+
+from pynvim import encoding
 
 
 class Base():
@@ -62,4 +65,10 @@ class Base():
     @classmethod
     def load_from_file(cls):
         """class method that returns a list of instances:"""
-        pass
+        empty_list = []
+        filename = cls.__name__ + ".json"
+        if os.path.exists(filename):
+            with open(filename, "r", encoding="utf_8") as file:
+                list = Base.from_json_string(file.read())
+                return [cls.create(**dct) for dct in list]
+        return empty_list
