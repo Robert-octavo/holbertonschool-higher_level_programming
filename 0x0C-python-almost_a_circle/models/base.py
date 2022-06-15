@@ -1,7 +1,5 @@
 #!/usr/bin/python3
 """Create a Class Base: """
-
-
 import json
 import os
 
@@ -59,41 +57,3 @@ class Base():
                 dummy = cls(1)
             dummy.update(**dictionary)
             return dummy
-
-    @classmethod
-    def load_from_file(cls):
-        """class method that returns a list of instances:"""
-        empty_list = []
-        filename = cls.__name__ + ".json"
-        if os.path.exists(filename):
-            with open(filename, "r") as file:
-                list = cls.from_json_string(file.read())
-                return [cls.create(**dct) for dct in list]
-        return empty_list
-
-    @classmethod
-    def save_to_file_csv(cls, list_objs):
-        """class method that writes the JSON string representation of
-        list_objs to a file"""
-        filename = cls.__name__ + ".csv"
-        with open(filename, "w", encoding="utf_8") as file:
-            if list_objs is None:
-                file.write("[]")
-            else:
-                """if cls.__name__ == "Rectangle":
-                    _fields = ["id", "width", "height", "x", "y"]
-                if cls.__name__ == "Square":
-                    _fields = ["id","size", "x", "y"]"""
-                list = [object.to_dictionary() for object in list_objs]
-                file.write(Base.to_json_string(list))
-
-    @classmethod
-    def load_from_file_csv(cls):
-        """class method that returns a list of instances:"""
-        empty_list = []
-        filename = cls.__name__ + ".cvs"
-        if os.path.exists(filename):
-            with open(filename, "r") as file:
-                list = cls.from_json_string(file.read())
-                return [cls.create(**dct) for dct in list]
-        return empty_list
