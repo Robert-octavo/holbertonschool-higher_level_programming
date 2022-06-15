@@ -3,7 +3,7 @@
 
 
 import json
-import os
+"""import os"""
 
 
 
@@ -65,8 +65,10 @@ class Base():
         """class method that returns a list of instances:"""
         empty_list = []
         filename = cls.__name__ + ".json"
-        if os.path.exists(filename):
+        """if os.path.exists(filename):"""
+        try: 
             with open(filename, "r", encoding="utf_8") as file:
                 list = cls.from_json_string(file.read())
-                return [cls.create(**dct) for dct in list]
-        return empty_list
+                return [cls.create(**dct) for dct in list]  
+        except Exception:
+            return empty_list
