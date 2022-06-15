@@ -62,7 +62,12 @@ class Base():
 
     @classmethod
     def load_from_file(cls):
-        """class method that returns a list of instances:"""
+        """Return a list of classes instantiated from a file of JSON
+        Reads from `<cls.__name__>.json`.
+        Returns:
+            If the file does not exist - an empty list.
+            Otherwise - a list of instantiated classes.
+        """
         empty_list = []
         filename = cls.__name__ + ".json"
         """if os.path.exists(filename):"""
