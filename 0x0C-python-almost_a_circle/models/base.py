@@ -58,3 +58,8 @@ class Base():
                 dummy = cls(1)
             dummy.update(**dictionary)
             return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        """class method that returns a list of instances:"""
+        pass
