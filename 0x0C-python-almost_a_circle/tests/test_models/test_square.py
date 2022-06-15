@@ -30,6 +30,17 @@ class TestSquare(unittest.TestCase):
 
         s1 = Square(9, 4, 5, 6)
         self.assertEqual(str(s1), "[Square] (6) 4/5 - 9")
+    
+    def test_10_for_instance(self):
+        """Test Square class: check for inheritance."""
+
+        s1 = Square(6)
+        self.assertTrue(isinstance(s1, Rectangle))
+        self.assertTrue(issubclass(Square, Rectangle))
+        self.assertFalse(isinstance(Square, Rectangle))
+        self.assertTrue(isinstance(s1, Base))
+        self.assertTrue(issubclass(Square, Base))
+        self.assertFalse(isinstance(Square, Base))
 
 if __name__ == '__main__':
     unittest.main()
