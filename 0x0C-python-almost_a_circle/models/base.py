@@ -6,7 +6,6 @@ from encodings import utf_8
 import json
 import os
 
-from pynvim import encoding
 
 
 class Base():
@@ -69,6 +68,6 @@ class Base():
         filename = cls.__name__ + ".json"
         if os.path.exists(filename):
             with open(filename, "r", encoding="utf_8") as file:
-                list = Base.from_json_string(file.read())
+                list = cls.from_json_string(file.read())
                 return [cls.create(**dct) for dct in list]
         return empty_list
