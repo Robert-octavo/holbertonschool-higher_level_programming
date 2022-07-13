@@ -69,4 +69,4 @@ At the end of this project, you are expected to be able to explain to anyone, wi
     8   Thriller
     $
 
-![SQL joins]()
+![SQL joins](https://github.com/Robert-octavo/holbertonschool-higher_level_programming/blob/main/0x0E-SQL_more_queries/img-readme/sql.png)
