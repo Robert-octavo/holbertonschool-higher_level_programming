@@ -4,7 +4,7 @@
 --      where name = California (but the id can be different, as per the example)
 --     * Results must be sorted in ascending order by cities.id
 --     * You are not allowed to use the JOIN 
-USE hbtn_0d_usa;
+-- USE hbtn_0d_usa;
 SELECT id, name 
 FROM cities 
 WHERE state_id = (
