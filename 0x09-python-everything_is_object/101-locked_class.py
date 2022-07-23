@@ -9,6 +9,7 @@ https://stackoverflow.com/questions/3603502/prevent-creating-new-attributes-outs
 
 
 class LockedClass:
+    "Lock Class"
     __slots__ = ["first_name"]
 
     def __init__(self, first_name=""):
