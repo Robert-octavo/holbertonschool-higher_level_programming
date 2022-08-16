@@ -2,7 +2,7 @@
 // TODO: Write a function that returns the reversed version of a list:
 
 exports.esrever = function (list) {
-  var output = [];
+  const output = [];
   while (list.length) {
     output.push(list.pop());
   }
