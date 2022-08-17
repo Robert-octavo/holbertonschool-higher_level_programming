@@ -16,6 +16,6 @@ axios.get(process.argv[2])
       }
     }
     console.log(count);
-  }).catch(error => {
+  });/* .catch(error => {
     console.log(error.response.status);
-  });
+  }); */
