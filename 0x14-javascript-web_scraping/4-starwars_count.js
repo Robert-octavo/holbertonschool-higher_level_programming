@@ -10,13 +10,20 @@ axios.get(process.argv[2])
     // handle success
     let count = 0;
     // console.log(response);// .data.results[0].director);
-    const actor = 'https://swapi-api.hbtn.io/api/people/' + '18' + '/';
+    // const actor = 'https://swapi-api.hbtn.io/api/people/' + '18' + '/';
     for (let i = 0; response.data.results[i]; i++) {
-      if (response.data.results[i].characters.includes(actor)) {
-        count++;
-      }
+      // if (response.data.results[i].characters.includes('https://swapi-api.hbtn.io/api/people/18/')) {
+      //  count++;
+      // }
+      const info = response.data.results[i].characters;
+      // console.log(info);
+      info.forEach(element => {
+        if (element.search('18') !== -1) {
+          count++;
+        }
+      });
     }
     console.log(count);
-  });/* .catch(error => {
+  }).catch(error => {
     console.log(error.response.status);
-  }); */
+  });
