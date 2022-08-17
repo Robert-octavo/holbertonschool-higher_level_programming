@@ -15,7 +15,7 @@ axios.get(process.argv[2])
         // count[response.data[i].userId] = num;
         // num++;
         if (isNaN(count[response.data[i].userId])) {
-          count[response.data[i].userId] = 0;
+          count[response.data[i].userId] = 1;
         } else {
           count[response.data[i].userId] += 1;
         }
