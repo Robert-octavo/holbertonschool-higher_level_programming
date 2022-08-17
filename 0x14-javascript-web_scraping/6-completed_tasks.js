@@ -9,7 +9,7 @@ axios.get(process.argv[2])
     // console.log(response)
     // console.log(response.data);
     const count = {};
-    let num = 0;
+    // const num = 0;
     for (let i = 0; response.data[i]; i++) {
       if (response.data[i].completed === true) {
         // count[response.data[i].userId] = num;
