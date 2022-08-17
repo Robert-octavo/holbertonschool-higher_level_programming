@@ -9,9 +9,10 @@ axios.get(process.argv[2])
   .then(function (response) {
     // handle success
     let count = 0;
-    // console.log(response.data.results[0].director);
+    console.log(response)//.data.results[0].director);
+    const actor = 'https://swapi-api.hbtn.io/api/people/' + '18' + '/'
     for (let i = 0; response.data.results[i]; i++) {
-      if (response.data.results[i].characters.includes('https://swapi-api.hbtn.io/api/people/18/')) {
+      if (response.data.results[i].characters.includes(actor)) {
         count++;
       }
     }
