@@ -14,5 +14,6 @@ if __name__ == "__main__":
                     FROM cities INNER JOIN states\
                     ON states.id = cities.state_id\
                     WHERE states.name = %s", (sys.argv[4],))
-    # print(", ".join([res[2] for res in cursor.fetchall() if res[4] == sys.argv[3]]))
+    # print(", ".join([res[2] for res in cursor.fetchall()
+    # if res[4] == sys.argv[3]]))
     print(", ".join([result[0] for result in cursor.fetchall()]))
