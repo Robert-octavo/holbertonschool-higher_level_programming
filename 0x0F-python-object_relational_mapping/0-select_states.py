@@ -5,7 +5,8 @@ import sys
 import MySQLdb
 
 # TODO: Create a connection getting the param from the terminal and with cursor
-# allow me to execute a query, fetchall() allow me to get all the data. fetchmany(), fetchone()
+# allow me to execute a query, fetchall() allow me to get all the data. 
+# fetchmany(), fetchone()
 
 db = MySQLdb.connect(user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
 cursor = db.cursor()
