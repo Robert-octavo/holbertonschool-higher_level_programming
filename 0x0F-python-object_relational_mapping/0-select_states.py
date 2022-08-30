@@ -8,11 +8,12 @@ import MySQLdb
 # allow me to execute a query, fetchall() allow me to get all the data.
 # fetchmany(), fetchone()
 
-db = MySQLdb.connect(
-                    host="localhost", port=3306,
-                    user=sys.argv[1], passwd=sys.argv[2],
-                    db=sys.argv[3]
-                    )
-cursor = db.cursor()
-cursor.execute("SELECT * FROM `states`")
-[print(state) for state in cursor.fetchall()]
+if __name__ == "__main__":
+    db = MySQLdb.connect(
+                        host="localhost", port=3306,
+                        user=sys.argv[1], passwd=sys.argv[2],
+                        db=sys.argv[3]
+                        )
+    cursor = db.cursor()
+    cursor.execute("SELECT * FROM `states`")
+    [print(state) for state in cursor.fetchall()]
