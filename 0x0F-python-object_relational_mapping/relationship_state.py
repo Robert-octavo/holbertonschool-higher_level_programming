@@ -7,9 +7,6 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
 from relationship_city import Base, City
 
-from relationship_city import Base, City
-Base = declarative_base()
-
 
 class State(Base):
     """class definition of a State"""
