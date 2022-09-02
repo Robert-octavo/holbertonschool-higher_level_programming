@@ -12,7 +12,7 @@ if __name__ == "__main__":
     res = requests.post('http://0.0.0.0:5000/search_user', data={'q': q})
     try:
         file = res.json()
-        cod , name = file.get("id") , file.get("name")
+        cod, name = file.get("id"), file.get("name")
         print("[{}] {}".format(cod, name)) if file else print("No result")
-    except:
+    except ValueError:
         print('Not a valid JSON')
