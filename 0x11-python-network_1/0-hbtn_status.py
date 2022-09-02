@@ -2,6 +2,7 @@
 """Python script that fetches https://intranet.hbtn.io/status"""
 import urllib.request as re
 
+
 if __name__ == "__main__":
     with re.urlopen('https://intranet.hbtn.io/status') as response:
         html = response.read()
