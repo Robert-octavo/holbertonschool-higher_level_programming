@@ -15,8 +15,11 @@ if __name__ == "__main__":
     repo, owner = sys.argv[1], sys.argv[2]
     result = requests.get("https://api.github.com/repos/{}/{}/commits".
                           format(owner, repo))
-    commits = result.json()
-    for i in range(0, 10):
-        code = commits[i].get("sha")
-        name = commits[i].get("commit").get("author").get("name")
-        print("{}: {}".format(code, name))
+    if result.status_code >= 400:
+        print('None')
+    else:
+        commits = result.json()
+        for i in range(0, 10):
+            code = commits[i].get("sha")
+            name = commits[i].get("commit").get("author").get("name")
+            print("{}: {}".format(code, name))
