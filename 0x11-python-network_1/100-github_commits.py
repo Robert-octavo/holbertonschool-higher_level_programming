@@ -24,4 +24,4 @@ if __name__ == "__main__":
             name = commits[i].get("commit").get("author").get("name")
             print("{}: {}".format(code, name))
     except:
-        print('None')
+        pass
