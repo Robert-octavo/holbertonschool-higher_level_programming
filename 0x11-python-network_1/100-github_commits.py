@@ -13,10 +13,10 @@ import sys
 
 if __name__ == "__main__":
     repo, owner = sys.argv[1], sys.argv[2]
-    result = requests.get("https://api.github.com/{}/{}/commits".
+    result = requests.get("https://api.github.com/repos/{}/{}/commits".
                           format(owner, repo))
     commits = result.json()
     for i in range(0, 10):
-        sha = commits[i].get("sha")
-        name = commits[i].get("commits").get("author").get("name")
-        print("{}: {}".format(sha, name))
+        code = commits[i].get("sha")
+        name = commits[i].get("commit").get("author").get("name")
+        print("{}: {}".format(code, name))
